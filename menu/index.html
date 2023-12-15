@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+  <link href="../styles/normalize.css" rel="stylesheet">
+  <link href="../styles/menu-style.css" rel="stylesheet">
+  <link rel="icon" href="../assets/images/favicon.png">
+  <title>Menu</title>
+</head>
+<body>
+
+  <div class="overlay unvisible" id="overlay"></div>
+
+  <div class="modal unvisible" id="modal-window">
+    <div class="modal__vision">
+      <div class="modal__vision_wrapper">
+        <img id="modal-image" class="modal__vision_wrapper_image" src="../assets/images/menu/coffee1.jpg" alt="Product">
+      </div>
+    </div>
+
+    <div class="modal__content">
+      <h3 class="modal__content_title" id="modal-title">Irish coffee</h3>
+      <p class="modal__content_description" id="modal-description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+      <div class="modal__content_size">
+        <span class="modal__content_size_name">Size</span>
+        <button id="btn-modal-size1" class="modal__content_button" disabled><span>S</span><span>200 ml</span></button><button id="btn-modal-size2" class="modal__content_button"><span>M</span><span>300 ml</span></button><button id="btn-modal-size3" class="modal__content_button"><span>L</span><span>400 ml</span></button>
+      </div>
+      <div class="modal__content_additives">
+        <span class="modal__content_additives_name">Additives</span>
+        <button id="btn-modal-additives1" class="modal__content_button"><span>1</span><span>Sugar</span></button><button id="btn-modal-additives2" class="modal__content_button"><span>2</span><span>Cinnamon</span></button><button id="btn-modal-additives3" class="modal__content_button"><span>3</span><span>Syrup</span></button>
+      </div>
+      <div class="modal__content_total">
+        <span>Total:</span><span id="modal-price">$7.00</span>
+      </div>
+      <div class="modal__content_notification">
+        <img src="../assets/images/svg/notification.svg" alt="Info">
+        <span>The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</span>
+      </div>
+      <button id="btn-modal-close" class="modal__content_btn-close">Close</button>
+    </div>
+  </div>
+    
+  <div class="container">
+    <header class="header">
+      <a href="../"><img src="../assets/images/svg/logo.svg" alt="Logo"></a>
+
+      <nav id="nav">
+        <ul class="menu-list" id="menu">
+          <li class="menu-list__item"><a href="../#favourites-coffee">Favorite coffee</a></li>
+          <li class="menu-list__item"><a href="../#about">About</a></li>
+          <li class="menu-list__item"><a href="../#mobile-app">Mobile app</a></li>
+          <li class="menu-list__item"><a href="#contact-us">Contact us</a></li>
+          <li class="menu-list__item">Menu <img src="../assets/images/svg/coffee-cup-burger.svg" alt="Coffee"></li>
+        </ul>
+      </nav>
+
+      <div class="header__btn-menu">
+        <span>Menu</span>
+        <img src="../assets/images/svg/coffe-cup.svg" class="menu-list__item_coffee" alt="Coffee">
+      </div>
+
+      <button class="header__burger-menu" id="btn-burger-menu"></button>
+    </header>
+
+    <section class="menu">
+      <h1>Behind each of our cups hides an <span>amazing surprise</span></h1>
+      <div class="menu__controls">
+        <button id="btn-coffee" class="menu__controls_btn menu__controls_btn_clicked" disabled><img src="../assets/images/png-icon/coffee.png" alt="Coffee">Coffee</button>
+        <button id="btn-tea" class="menu__controls_btn"><img src="../assets/images/png-icon/tea.png" alt="Tea">Tea</button>
+        <button id="btn-dessert" class="menu__controls_btn"><img src="../assets/images/png-icon/dessert.png" alt="Dessert">Dessert</button>
+      </div>
+
+      <div class="menu__products coffee" id="coffee-block">
+        <div class="product" data-number="0">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee1.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Irish coffee</h3>
+          <p class="product__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+          <p class="product__price">$7.00</p>
+        </div>
+        
+        <div class="product" data-number="1">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee2.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Kahlua coffee</h3>
+          <p class="product__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+          <p class="product__price">$7.00</p>
+        </div>
+
+        <div class="product" data-number="2">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee3.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Honey raf</h3>
+          <p class="product__description">Espresso with frothed milk, cream and aromatic honey</p>
+          <p class="product__price">$5.50</p>
+        </div>
+
+        <div class="product" data-number="3">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee4.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Ice cappuccino</h3>
+          <p class="product__description">Cappuccino with soft thick foam in summer version with ice</p>
+          <p class="product__price">$5.00</p>
+        </div>
+
+        <div class="product product__coffee product__coffee-hide" data-number="4">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee5.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Espresso</h3>
+          <p class="product__description">Classic black coffee</p>
+          <p class="product__price">$4.50</p>
+        </div>
+
+        <div class="product product__coffee product__coffee-hide" data-number="5">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee6.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Latte</h3>
+          <p class="product__description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+          <p class="product__price">$5.50</p>
+        </div>
+
+        <div class="product product__coffee product__coffee-hide" data-number="6">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee7.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Latte macchiato</h3>
+          <p class="product__description">Espresso with frothed milk and chocolate</p>
+          <p class="product__price">$5.50</p>
+        </div>
+
+        <div class="product product__coffee product__coffee-hide" data-number="7">
+          <div class="product__image">
+            <img src="../assets/images/menu/coffee8.jpg" alt="Coffee">
+          </div>
+          <h3 class="product__title">Coffee with cognac</h3>
+          <p class="product__description">Fragrant black coffee with cognac and whipped cream</p>
+          <p class="product__price">$6.50</p>
+        </div>
+      </div>
+
+      <div class="menu__products tea unvisible" id="tea-block">
+        <div class="product" data-number="8">
+          <div class="product__image">
+            <img src="../assets/images/menu/tea1.jpg" alt="Tea">
+          </div>
+          <h3 class="product__title">Moroccan</h3>
+          <p class="product__description">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+          <p class="product__price">$4.50</p>
+        </div>
+
+        <div class="product" data-number="9">
+          <div class="product__image">
+            <img src="../assets/images/menu/tea2.jpg" alt="Tea">
+          </div>
+          <h3 class="product__title">Ginger</h3>
+          <p class="product__description">Original black tea with fresh ginger, lemon and honey</p>
+          <p class="product__price">$5.00</p>
+        </div>
+
+        <div class="product" data-number="10">
+          <div class="product__image">
+            <img src="../assets/images/menu/tea3.jpg" alt="Tea">
+          </div>
+          <h3 class="product__title">Cranberry</h3>
+          <p class="product__description">Invigorating black tea with cranberry and honey</p>
+          <p class="product__price">$5.00</p>
+        </div>
+
+        <div class="product" data-number="11">
+          <div class="product__image">
+            <img src="../assets/images/menu/tea4.jpg" alt="Tea">
+          </div>
+          <h3 class="product__title">Sea buckthorn</h3>
+          <p class="product__description">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+          <p class="product__price">$5.50</p>
+        </div>
+      </div>
+
+      <div class="menu__products dessert unvisible" id="dessert-block">
+        <div class="product" data-number="12">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert1.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Marble cheesecake</h3>
+          <p class="product__description">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+          <p class="product__price">$3.50</p>
+        </div>
+
+        <div class="product" data-number="13">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert2.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Red velvet</h3>
+          <p class="product__description">Layer cake with cream cheese frosting</p>
+          <p class="product__price">$4.00</p>
+        </div>
+
+        <div class="product" data-number="14">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert3.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Cheesecakes</h3>
+          <p class="product__description">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+          <p class="product__price">$4.50</p>
+        </div>
+
+        <div class="product" data-number="15">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert4.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Creme brulee</h3>
+          <p class="product__description">Delicate creamy dessert in a caramel basket with wild berries</p>
+          <p class="product__price">$4.00</p>
+        </div>
+
+        <div class="product product__dessert product__dessert-hide" data-number="16">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert5.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Pancakes</h3>
+          <p class="product__description">Tender pancakes with strawberry jam and fresh strawberries</p>
+          <p class="product__price">$4.50</p>
+        </div>
+
+        <div class="product product__dessert product__dessert-hide" data-number="17">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert6.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Honey cake</h3>
+          <p class="product__description">Classic honey cake with delicate custard</p>
+          <p class="product__price">$4.50</p>
+        </div>
+
+        <div class="product product__dessert product__dessert-hide" data-number="18">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert7.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Chocolate cake</h3>
+          <p class="product__description">Cake with hot chocolate filling and nuts with dried apricots</p>
+          <p class="product__price">$5.50</p>
+        </div>
+
+        <div class="product product__dessert product__dessert-hide" data-number="19">
+          <div class="product__image">
+            <img src="../assets/images/menu/dessert8.jpg" alt="Dessert">
+          </div>
+          <h3 class="product__title">Black forest</h3>
+          <p class="product__description">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
+          <p class="product__price">$6.50</p>
+        </div>
+      </div>
+
+      <button id="btn-refresh" class="refresh-btn show"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </section>
+
+  </div>
+
+  <footer class="footer" id="contact-us">
+    <div class="footer__smile">
+      <h2>Sip, Savor, Smile. <span>It’s coffee time!</span></h2>
+      <a href="https://twitter.com/" target="_blank" class="footer__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://www.instagram.com/" target="_blank"  class="footer__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"/><path d="M17.5 6.51L17.51 6.49889" stroke="#E1D4C9" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://www.facebook.com/" target="_blank"  class="footer__button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="footer__contacts">
+      <h3>Contact us</h3>
+      <a href="https://www.google.ru/maps/search/8558+Green+Rd,+Вест+Монро,+LA,+США/@33.3057871,-110.6894355,6z/data=!3m1!4b1?entry=ttu" target="_blank"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.6663 8.33329C16.6663 12.0152 9.99967 18.3333 9.99967 18.3333C9.99967 18.3333 3.33301 12.0152 3.33301 8.33329C3.33301 4.65139 6.31778 1.66663 9.99967 1.66663C13.6816 1.66663 16.6663 4.65139 16.6663 8.33329Z" stroke="#E1D4C9" stroke-width="1.5"/><path d="M10.0003 9.16667C10.4606 9.16667 10.8337 8.79357 10.8337 8.33333C10.8337 7.8731 10.4606 7.5 10.0003 7.5C9.54009 7.5 9.16699 7.8731 9.16699 8.33333C9.16699 8.79357 9.54009 9.16667 10.0003 9.16667Z" fill="#E1D4C9" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>8558 Green Rd.,  LA</a>
+      <a href="tel:+16035550123"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.0984 12.2516L11.6665 12.9166C9.34845 11.7531 7.91654 10.4166 7.08321 8.33329L7.72483 4.89154L6.51197 1.66663L3.72946 1.66663C2.60191 1.66663 1.71466 2.59958 1.90108 3.71161C2.29888 6.08454 3.37231 10.0391 6.24987 12.9166C9.27338 15.9401 13.5661 17.3318 16.1378 17.9288C17.299 18.1983 18.3332 17.2908 18.3332 16.0988L18.3332 13.4843L15.0984 12.2516Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>+1 (603) 555-0123</a>
+      <p><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_217_1736)"><path d="M10 5L10 10L15 10" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 18.3333C14.6027 18.3333 18.3337 14.6023 18.3337 9.99996C18.3337 5.39759 14.6027 1.66663 10.0003 1.66663C5.39795 1.66663 1.66699 5.39759 1.66699 9.99996C1.66699 14.6023 5.39795 18.3333 10.0003 18.3333Z" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_217_1736"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>Mon-Sat: 9:00 AM – 23:00 PM</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/menu-page.js"></script>
+
+</body>
+</html>
